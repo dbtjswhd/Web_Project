@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>가상 충전 | 우사기 토토</title>
+    <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+
+<body>
+    <header class="header"><a href="index.html" class="logo"><img class="brand-mascot" src="assets/usagi_1.png"
+                alt="우사기 캐릭터"> <span class="brand-name">우사기 <b>토토</b><small>USAGI TOTO</small></span></a>
+        <nav class="nav"><a href="index.html#matches">스포츠</a><a href="index.html#featured">인기 경기</a><a
+                href="index.html#matches">경기 일정</a></nav>
+        <div class="header-actions"><span class="balance"><b id="balance-value">0</b> P</span><a
+                class="account-action member-only" href="charge.html" hidden>충전</a><a class="account-action member-only"
+                href="withdraw.html" hidden>환급</a><a class="account-action member-only" href="mypage.html"
+                hidden>마이페이지</a><a class="login guest-only" href="login.html">로그인</a><a class="signup guest-only"
+                href="signup.html">회원가입</a><button class="account-action member-only" data-logout hidden>로그아웃</button>
+        </div>
+    </header>
+    <main class="subpage">
+        <div class="page-panel"><img class="page-usagi" src="assets/usagi_3.png" alt="우사기"><span
+                class="section-kicker">POINT WALLET</span>
+            <h1>가상 포인트 충전</h1>
+            <p class="demo-note">실제 결제 없이 브라우저에 가상 포인트만 추가됩니다.</p>
+            <p class="wallet-balance">현재 잔액 <strong id="wallet-balance">0 P</strong></p>
+            <form id="charge-form" class="page-form"><label>충전 포인트<input id="charge-amount" type="text"
+                        inputmode="numeric" pattern="[0-9]*" min="1" max="1000000" step="1" value="10000"
+                        required></label><button class="primary-action" type="submit">가상 충전하기</button></form>
+            <p class="page-help"><a href="index.html">경기 목록으로 돌아가기</a></p>
+        </div>
+    </main>
+    <script src="js/common.js"></script>
+    <script src="js/charge.js"></script>
+    <div class="usagi-float-widget" aria-hidden="true"><img src="assets/usagi_wave.gif" alt=""></div>
+</body>
+
+</html>

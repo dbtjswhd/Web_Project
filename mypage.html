@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>마이페이지 | 우사기 토토</title>
+    <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+
+<body>
+    <header class="header"><a href="index.html" class="logo"><img class="brand-mascot" src="assets/usagi_1.png"
+                alt="우사기 캐릭터"> <span class="brand-name">우사기 <b>토토</b><small>USAGI TOTO</small></span></a>
+        <nav class="nav"><a href="index.html#matches">스포츠</a><a href="index.html#featured">인기 경기</a><a
+                href="index.html#matches">경기 일정</a></nav>
+        <div class="header-actions"><span class="balance"><b id="balance-value">0</b> P</span><a
+                class="account-action member-only" href="charge.html" hidden>충전</a><a class="account-action member-only"
+                href="withdraw.html" hidden>환급</a><a class="account-action member-only" href="mypage.html"
+                hidden>마이페이지</a><a class="login guest-only" href="login.html">로그인</a><a class="signup guest-only"
+                href="signup.html">회원가입</a><button class="account-action member-only" data-logout hidden>로그아웃</button>
+        </div>
+    </header>
+    <main class="subpage">
+        <div class="page-panel"><img class="page-usagi" src="assets/usagi_4.png" alt="우사기"><span
+                class="section-kicker">MY ACCOUNT</span>
+            <h1>마이페이지 <small id="mypage-name"></small></h1>
+            <div class="account-stats">
+                <div><small>총 구매 포인트</small><strong id="total-staked">0 P</strong></div>
+                <div><small>총 적중 환급 포인트</small><strong id="total-returned">0 P</strong></div>
+                <div><small>환급률</small><strong id="return-rate">0.0%</strong></div>
+            </div>
+            <div class="wallet-shortcuts"><a class="primary-action" href="charge.html">가상 충전</a><a
+                    class="account-action" href="withdraw.html">가상 환급 신청</a></div>
+            <h2>구매 / 적중 내역</h2>
+            <div id="history-list" class="history-list"></div>
+            <p class="demo-note">경기 결과는 자동 연동되지 않으며 적중 여부는 직접 선택합니다.</p>
+            <p class="page-help"><a href="index.html">경기 목록으로 돌아가기</a></p>
+        </div>
+    </main>
+    <script src="js/common.js"></script>
+    <script src="js/mypage.js"></script>
+    <div class="usagi-float-widget" aria-hidden="true"><img src="assets/usagi_wave.gif" alt=""></div>
+</body>
+
+</html>

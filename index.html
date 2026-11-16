@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>우사기 토토 | Sports Prediction</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=5" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="logo"><img class="brand-mascot" src="assets/usagi_1.png" alt="우사기 캐릭터"> <span
+        class="brand-name">우사기 <b>토토</b><small>USAGI TOTO</small></span></a>
+    <nav class="nav">
+      <a class="active" href="#matches">스포츠</a>
+      <a href="#featured">인기 경기</a>
+      <a href="#matches">경기 일정</a>
+      <a href="#guide">이용 안내</a>
+    </nav>
+    <div class="header-actions">
+      <span class="balance"><b id="balance-value">0</b> P</span>
+      <a href="charge.html" class="account-action member-only" hidden>충전</a><a href="withdraw.html"
+        class="account-action member-only" hidden>환급</a><a href="mypage.html" class="account-action member-only"
+        hidden>마이페이지</a><a href="login.html" class="login guest-only">로그인</a><button id="logout-btn"
+        class="account-action member-only" data-logout hidden>로그아웃</button>
+      <a href="signup.html" class="signup guest-only">회원가입</a>
+    </div>
+  </header>
+  <main class="layout">
+    <aside class="sidebar">
+      <div class="side-title">SPORTS MENU <span>↗</span></div>
+      <a class="side-link selected" href="#matches"><span>◈</span> 전체 스포츠 <em>24</em></a>
+      <a class="side-link" href="#matches"><span>⚽</span> 축구 <em>12</em></a>
+      <a class="side-link" href="#matches"><span>🏀</span> 농구 <em>6</em></a>
+      <a class="side-link" href="#matches"><span>⚾</span> 야구 <em>4</em></a>
+      <a class="side-link" href="#matches"><span>🏐</span> 배구 <em>2</em></a>
+      <div class="side-separator"></div>
+      <div class="side-title">QUICK ACCESS</div>
+      <a class="side-link" href="#featured"><span>✦</span> 인기 매치</a>
+      <a class="side-link" href="#guide"><span>ⓘ</span> 이용 가이드</a>
+      <div class="side-promo"><img class="side-usagi" src="assets/usagi_4.png" alt="우사기"><span>USAGI TOTO</span>
+        <h3>오늘도 신나게<br>우사기와 예측!</h3>
+        <p>가상 포인트로 즐기는 스포츠 예측</p><a href="#matches">경기 살펴보기 ↗</a>
+      </div>
+      <p class="side-foot">© 2026 우사기 토토<br>USAGI TOTO</p>
+    </aside>
+    <section class="content">
+      <div class="hero" id="featured">
+        <div class="hero-content">
+          <div class="eyebrow"><span class="live-dot"></span> FEATURED MATCH · MATCHDAY 12</div>
+          <h1>우사기와 함께<br><em>오늘의 승부 예측!</em></h1>
+          <p>좋아하는 경기를 골라보자!<br>가상 포인트로 즐기는 스포츠 예측 놀이터.</p><a class="hero-cta" href="#matches">경기 확인하기 <span>↗</span></a>
+        </div>
+        <div class="hero-art">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <img class="hero-usagi" src="assets/usagi_2.png" alt="신나는 우사기">
+          <div class="hero-stat">USAGI<span>TOTO</span></div>
+        </div>
+        <div class="hero-index">01 <span>/ 03</span></div>
+      </div>
+      <div class="stats">
+        <div><span class="stat-icon">◉</span>
+          <div><small>진행 예정 경기</small><strong>24 <span>MATCHES</span></strong></div>
+        </div>
+        <div><span class="stat-icon">▣</span>
+          <div><small>지원 스포츠</small><strong>04 <span>SPORTS</span></strong></div>
+        </div>
+        <div><span class="stat-icon">✧</span>
+          <div><small>오늘의 하이라이트</small><strong>08 <span>FEATURED</span></strong></div>
+        </div>
+      </div>
+      <div class="section-heading" id="matches">
+        <div><span class="section-kicker">EXPLORE MATCHES</span>
+          <h2>스포츠 경기 <span>일정</span></h2>
+        </div>
+        <div class="date-label" style="font-size: 15px;">
+          <script>
+            const today = new Date();
+            const year = today.getFullYear();
+            const month = String(today.getMonth() + 1).padStart(2, '0');
+            const day = String(today.getDate()).padStart(2, '0');
+            const next = String(today.getDate()+1).padStart(2, '0');
+            const formattedDate = `🗓️ ${year}-${month}-${day} ~ ${year}-${month}-${(next)}`;
+
+            document.querySelector('.date-label').textContent = formattedDate;
+          </script>
+        </div>
+      </div>
+      <div class="filters">
+        <button class="filter active" data-sport="all">전체 경기 <span id="visible-count">6</span></button>
+        <button class="filter" data-sport="soccer">⚽ 축구</button>
+        <button class="filter" data-sport="basketball">🏀농구</button>
+        <button class="filter" data-sport="baseball">⚾ 야구</button>
+        <button class="filter" data-sport="volleyball">🏐 배구</button>
+      </div>
+      <div class="match-list">
+        <div class="list-head">
+          <span>MATCH / LEAGUE</span><span>배당 선택 <small>유형별 예측</small></span>
+        </div>
+        <article class="match" data-sport="soccer">
+          <div class="match-info">
+            <div class="league">
+              <span class="flag">⚽</span> PREMIER LEAGUE <span class="match-tag">HOT</span>
+            </div>
+            <div class="teams">
+              <span>맨체스터 시티</span><b>VS</b><span>아스널</span>
+            </div>
+            <div class="match-time">◷ 11.07 (토) 21:30 · 경기 예정</div>
+          </div>
+          <div class="odds">
+            <button data-pick="맨체스터 시티 승" data-odd="1.85"><small>홈 승</small><b>1.85</b>
+            </button>
+            <button data-pick="무승부" data-odd="3.40"><small>무</small><b>3.40</b></button>
+            <button data-pick="아스널 승" data-odd="3.95"><small>원정 승</small><b>3.95</b></button>
+          </div>
+        </article>
+        <article class="match" data-sport="soccer">
+          <div class="match-info">
+            <div class="league">
+              <span class="flag">⚽</span> LA LIGA
+            </div>
+            <div class="teams">
+              <span>레알 마드리드</span><b>VS</b><span>바르셀로나</span>
+            </div>
+            <div class="match-time">◷ 11.07 (토) 23:00 · 경기 예정</div>
+          </div>
+          <div class="odds">
+            <button data-pick="레알 마드리드 승" data-odd="2.10"><small>홈 승</small><b>2.10</b></button>
+            <button data-pick="무승부" data-odd="3.25"><small>무</small><b>3.25</b></button>
+            <button data-pick="바르셀로나 승" data-odd="3.10"><small>원정 승</small><b>3.10</b></button>
+          </div>
+        </article>
+        <article class="match" data-sport="basketball">
+          <div class="match-info">
+            <div class="league"><span class="flag">🏀</span> NBA <span class="match-tag purple">POPULAR</span></div>
+            <div class="teams"><span>LA 레이커스</span><b>VS</b><span>골든스테이트</span></div>
+            <div class="match-time">◷ 11.08 (일) 10:00 · 경기 예정</div>
+          </div>
+          <div class="odds two"><button data-pick="LA 레이커스 승" data-odd="1.92"><small>홈
+                승</small><b>1.92</b></button><button data-pick="골든스테이트 승" data-odd="1.88"><small>원정
+                승</small><b>1.88</b></button></div>
+        </article>
+        <article class="match" data-sport="soccer">
+          <div class="match-info">
+            <div class="league"><span class="flag">⚽</span> BUNDESLIGA</div>
+            <div class="teams"><span>바이에른 뮌헨</span><b>VS</b><span>도르트문트</span></div>
+            <div class="match-time">◷ 11.08 (일) 02:30 · 경기 예정</div>
+          </div>
+          <div class="odds"><button data-pick="바이에른 뮌헨 승" data-odd="1.65"><small>홈 승</small><b>1.65</b></button><button
+              data-pick="무승부" data-odd="3.80"><small>무</small><b>3.80</b></button><button data-pick="도르트문트 승"
+              data-odd="4.60"><small>원정 승</small><b>4.60</b></button></div>
+        </article>
+        <article class="match" data-sport="baseball">
+          <div class="match-info">
+            <div class="league"><span class="flag">⚾</span> BASEBALL · EXHIBITION</div>
+            <div class="teams"><span>블루 타이거즈</span><b>VS</b><span>레드 이글스</span></div>
+            <div class="match-time">◷ 11.08 (일) 14:00 · 가상 경기</div>
+          </div>
+          <div class="odds two"><button data-pick="블루 타이거즈 승" data-odd="1.76"><small>홈
+                승</small><b>1.76</b></button><button data-pick="레드 이글스 승" data-odd="2.05"><small>원정
+                승</small><b>2.05</b></button></div>
+        </article>
+        <article class="match" data-sport="volleyball">
+          <div class="match-info">
+            <div class="league"><span class="flag">🏐</span> VOLLEYBALL · EXHIBITION</div>
+            <div class="teams"><span>서울 스파이크</span><b>VS</b><span>부산 웨이브</span></div>
+            <div class="match-time">◷ 11.08 (일) 16:00 · 가상 경기</div>
+          </div>
+          <div class="odds two"><button data-pick="서울 스파이크 승" data-odd="1.72"><small>홈
+                승</small><b>1.72</b></button><button data-pick="부산 웨이브 승" data-odd="2.12"><small>원정
+                승</small><b>2.12</b></button></div>
+        </article>
+      </div>
+      <button id="more-matches" class="more-matches">다른 경기 더보기 ↓</button>
+    </section>
+    <aside class="slip">
+      <div class="slip-heading">
+        <div><span class="section-kicker">MY SELECTION</span>
+          <h3>예측 슬립 <span id="pick-count">0</span></h3>
+        </div><span class="slip-icon">▤</span>
+      </div>
+      <div id="pick-list" class="pick-list">
+        <div class="empty-slip"><img class="slip-decor" src="assets/usagi_5.png" alt="">
+          <div class="empty-icon">◎</div><strong>선택한 경기가 없습니다</strong>
+          <p>경기 배당률을 클릭하면<br>여기에 선택 내역이 표시됩니다.</p>
+        </div>
+      </div>
+      <div class="slip-bottom">
+        <div class="slip-row"><span>선택 경기</span><b id="selection-count">0 경기</b></div>
+        <div class="slip-row"><span>총 배당률</span><b id="total-odds">0.00</b></div><label for="stake">가상 예측 포인트</label>
+        <div class="stake-input"><input id="stake" type="text" inputmode="numeric" pattern="[0-9]*" min="0"
+            max="1000000" value="1000" /><span>P</span></div><button id="stake-all" class="fill-all" type="button">사용 가능
+          포인트 전부 넣기</button>
+        <div class="slip-row expected"><span>예상 가상 포인트</span><strong id="expected">0 P</strong></div><button
+          id="submit-pick" class="submit-pick">가상 예측 완료 <span>↗</span></button>
+        <p class="slip-note">가상 포인트 전용 · 실제 결제 및 송금 불가</p>
+      </div>
+    </aside>
+  </main>
+
+  <script src="js/common.js"></script>
+  <script src="js/matches.js"></script>
+  <div class="usagi-float-widget" aria-hidden="true"><img src="assets/usagi_wave.gif" alt=""></div>
+</body>
+
+</html>

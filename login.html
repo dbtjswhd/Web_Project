@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>로그인 | 우사기 토토</title>
+    <link rel="stylesheet" href="css/style.css?v=5">
+</head>
+
+<body>
+    <header class="header"><a href="index.html" class="logo"><img class="brand-mascot" src="assets/usagi_1.png"
+                alt="우사기 캐릭터"> <span class="brand-name">우사기 <b>토토</b><small>USAGI TOTO</small></span></a>
+        <nav class="nav"><a href="index.html#matches">스포츠</a><a href="index.html#featured">인기 경기</a><a
+                href="index.html#matches">경기 일정</a></nav>
+        <div class="header-actions"><span class="balance"><b id="balance-value">0</b> P</span><a
+                class="account-action member-only" href="charge.html" hidden>충전</a><a class="account-action member-only"
+                href="withdraw.html" hidden>환급</a><a class="account-action member-only" href="mypage.html"
+                hidden>마이페이지</a><a class="login guest-only" href="login.html">로그인</a><a class="signup guest-only"
+                href="signup.html">회원가입</a><button class="account-action member-only" data-logout hidden>로그아웃</button>
+        </div>
+    </header>
+    <main class="subpage">
+        <div class="page-panel"><img class="page-usagi" src="assets/usagi_1.png" alt="우사기"><span
+                class="section-kicker">우사기 토토 ACCOUNT</span>
+            <h1>로그인</h1>
+            <form id="login-form" class="page-form"><label>아이디<input id="auth-id" required minlength="3" maxlength="24"
+                        autocomplete="username" placeholder="아이디"></label><label>비밀번호<input id="auth-password"
+                        type="password" required minlength="4" autocomplete="current-password"
+                        placeholder="비밀번호"></label>
+                <p id="auth-error" class="form-error" role="alert"></p><button class="primary-action"
+                    type="submit">로그인</button>
+            </form>
+            <p class="page-help">계정이 없나요? <a href="signup.html">회원가입</a></p>
+            <p class="demo-note">브라우저에만 저장됩니다. 평소 사용하는 비밀번호는 입력하지 마세요.</p>
+        </div>
+    </main>
+    <script src="js/common.js"></script>
+    <script src="js/login.js"></script>
+    <div class="usagi-float-widget" aria-hidden="true"><img src="assets/usagi_wave.gif" alt=""></div>
+</body>
+
+</html>
