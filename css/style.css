@@ -1877,8 +1877,6 @@ a {
     object-fit: contain;
     position: relative;
     z-index: 2;
-    filter: drop-shadow(0 12px 8px #a9707040);
-    animation: usagi-float 3.4s ease-in-out infinite;
 }
 
 @keyframes usagi-float {
@@ -1893,21 +1891,8 @@ a {
     }
 }
 
-.hero-stat {
-    background: #fffaf0e8 !important;
-    color: #a35f75 !important;
-    border: 1px solid #f5d7df !important;
-    right: 0 !important;
-    bottom: 8px !important;
-    top: auto !important;
-}
-
 .hero-index {
     color: #ad8992 !important;
-}
-
-.orbit {
-    border-color: #efbbcb !important;
 }
 
 .stats,
@@ -2468,6 +2453,157 @@ a:focus-visible {
     --green-dark: #ffe8ef
 }
 
+body {
+    background: #fffaf4 !important;
+    color: #352b2a !important
+}
+
+.header,
+.sidebar,
+.slip,
+.page-panel {
+    color: #352b2a
+}
+
+.header .nav a,
+.side-link,
+.side-title,
+.slip-heading,
+.slip-row,
+.slip-row span,
+.slip-row b,
+.slip-note,
+.page-form label,
+.page-help,
+.demo-note {
+    color: #503d38 !important
+}
+
+.page-form input,
+.slip input {
+    color: #382a29 !important;
+    background: #fffaf6 !important;
+    border: 1px solid #d9bfb4 !important
+}
+
+.page-form input::placeholder,
+.slip input::placeholder {
+    color: #816d65 !important;
+    opacity: 1
+}
+
+.page-form label,
+.slip-row {
+    font-weight: 650 !important
+}
+
+.fixture-header .teams,
+.fixture-header .teams span,
+.fixture-header .league,
+.fixture-header .match-time {
+    color: #3d2c2b !important
+}
+
+.market-title,
+.market-label,
+.market-row,
+.market-row span {
+    color: #49352f !important
+}
+
+.odds button,
+.odds button b,
+.odds button small {
+    color: #342827 !important
+}
+
+.slip .empty-slip,
+.slip .empty-slip p,
+.slip .empty-slip strong,
+.slip .pick-item,
+.slip .pick-item * {
+    color: #503c39 !important
+}
+
+.slip .pick-item {
+    background: #fff7f0 !important;
+    border-color: #e6d4c8 !important
+}
+
+.slip .slip-row input {
+    width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    padding-right: 48px !important
+}
+
+.slip .slip-row {
+    min-width: 0
+}
+
+.account-stats small,
+.wallet-balance,
+.history-list,
+.history-list * {
+    color: #4e3b37
+}
+
+.primary-action,
+.signup {
+    color: #3c2730 !important
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+    outline: 3px solid #ad426b !important;
+    outline-offset: 2px
+}
+
+/* Fixed, unobtrusive mascot, relative to the viewport */
+.usagi-float-widget {
+    position: fixed;
+    right: 16px;
+    bottom: 14px;
+    width: 76px;
+    height: 95px;
+    z-index: 90;
+    pointer-events: none;
+    opacity: .91;
+    filter: drop-shadow(0 3px 6px #59403420)
+}
+
+.usagi-float-widget img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain
+}
+
+@media(max-width:720px) {
+    .usagi-float-widget {
+        width: 52px;
+        height: 67px;
+        right: 7px;
+        bottom: 8px;
+        opacity: .8
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .usagi-float-widget {
+        display: none
+    }
+}
+
+.slip-decor {
+    width: 54px;
+    height: 54px;
+    object-fit: contain;
+    opacity: .7;
+    display: block;
+    margin: 0 auto 8px
+}#ffe8ef
 body {
     background: #fffaf4 !important;
     color: #352b2a !important

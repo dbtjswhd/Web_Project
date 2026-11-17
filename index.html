@@ -10,7 +10,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=5" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -35,7 +35,8 @@
   <main class="layout">
     <aside class="sidebar">
       <div class="side-title">SPORTS MENU <span>↗</span></div>
-      <a class="side-link selected" href="#matches"><span>◈</span> 전체 스포츠 <em>24</em></a>
+      <a class="side-link selected" href="#matches"><span>◈</span> 전체 스포츠 <em>27</em></a>
+      <a class="side-link" href="#matches"><span>🥊</span> 결투 <em>3</em></a>
       <a class="side-link" href="#matches"><span>⚽</span> 축구 <em>12</em></a>
       <a class="side-link" href="#matches"><span>🏀</span> 농구 <em>6</em></a>
       <a class="side-link" href="#matches"><span>⚾</span> 야구 <em>4</em></a>
@@ -46,7 +47,7 @@
       <a class="side-link" href="#guide"><span>ⓘ</span> 이용 가이드</a>
       <div class="side-promo"><img class="side-usagi" src="assets/usagi_4.png" alt="우사기"><span>USAGI TOTO</span>
         <h3>오늘도 신나게<br>우사기와 예측!</h3>
-        <p>가상 포인트로 즐기는 스포츠 예측</p><a href="#matches">경기 살펴보기 ↗</a>
+        <p style="font-size: 16px;">가상 포인트로 즐기는 스포츠 예측</p><a href="#matches">경기 살펴보기 ↗</a>
       </div>
       <p class="side-foot">© 2026 우사기 토토<br>USAGI TOTO</p>
     </aside>
@@ -58,12 +59,8 @@
           <p>좋아하는 경기를 골라보자!<br>가상 포인트로 즐기는 스포츠 예측 놀이터.</p><a class="hero-cta" href="#matches">경기 확인하기 <span>↗</span></a>
         </div>
         <div class="hero-art">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <img class="hero-usagi" src="assets/usagi_2.png" alt="신나는 우사기">
-          <div class="hero-stat">USAGI<span>TOTO</span></div>
+          <video class="hero-usagi" autoplay loop src="assets/usagi_dance.mov">
         </div>
-        <div class="hero-index">01 <span>/ 03</span></div>
       </div>
       <div class="stats">
         <div><span class="stat-icon">◉</span>
@@ -95,6 +92,7 @@
       </div>
       <div class="filters">
         <button class="filter active" data-sport="all">전체 경기 <span id="visible-count">6</span></button>
+        <button class="filter" data-sport="fight">🥊 결투</button>
         <button class="filter" data-sport="soccer">⚽ 축구</button>
         <button class="filter" data-sport="basketball">🏀농구</button>
         <button class="filter" data-sport="baseball">⚾ 야구</button>
@@ -104,6 +102,60 @@
         <div class="list-head">
           <span>MATCH / LEAGUE</span><span>배당 선택 <small>유형별 예측</small></span>
         </div>
+        <article class="match" data-sport="fight">
+          <div class="match-info">
+            <div class="league">
+              <span class="flag">🥊</span> CHIIKAWA LEAGUE <span class="match-tag">HOT</span>
+            </div>
+            <div class="teams">
+              <span>우사기</span><b>VS</b><span>모몽가</span>
+            </div>
+            <div class="match-time">◷ 11.07 (토) 21:30 · 경기 예정</div>
+          </div>
+          <div class="odds">
+            <button data-pick="우사기 승" data-odd="1.85"><small>홈 승</small><b>1.85</b>
+            </button>
+            <button data-pick="무승부" data-odd="3.40"><small>무</small><b>3.40</b></button>
+            <button data-pick="모몽가 승" data-odd="3.95"><small>원정 승</small><b>3.95</b></button>
+          </div>
+        </article>
+
+        <article class="match" data-sport="fight">
+          <div class="match-info">
+            <div class="league">
+              <span class="flag">🥊</span> CHIIKAWA LEAGUE <span class="match-tag">HOT</span>
+            </div>
+            <div class="teams">
+              <span>하치와레</span><b>VS</b><span>치이카와</span>
+            </div>
+            <div class="match-time">◷ 11.08 (일) 20:30 · 경기 예정</div>
+          </div>
+          <div class="odds">
+            <button data-pick="하치와레 승" data-odd="1.24"><small>홈 승</small><b>1.24</b>
+            </button>
+            <button data-pick="무승부" data-odd="3.40"><small>무</small><b>3.40</b></button>
+            <button data-pick="치이카와 승" data-odd="6.95"><small>원정 승</small><b>6.95</b></button>
+          </div>
+        </article>
+
+        <article class="match" data-sport="fight">
+          <div class="match-info">
+            <div class="league">
+              <span class="flag">🥊</span> CHIIKAWA LEAGUE <span class="match-tag">HOT</span>
+            </div>
+            <div class="teams">
+              <span>랏코</span><b>VS</b><span>시사</span>
+            </div>
+            <div class="match-time">◷ 11.08 (일) 20:30 · 경기 예정</div>
+          </div>
+          <div class="odds">
+            <button data-pick="랏코 승" data-odd="1.05"><small>홈 승</small><b>1.05</b>
+            </button>
+            <button data-pick="무승부" data-odd="3.40"><small>무</small><b>3.40</b></button>
+            <button data-pick="시사 승" data-odd="5.95"><small>원정 승</small><b>5.95</b></button>
+          </div>
+        </article>
+
         <article class="match" data-sport="soccer">
           <div class="match-info">
             <div class="league">
@@ -121,6 +173,7 @@
             <button data-pick="아스널 승" data-odd="3.95"><small>원정 승</small><b>3.95</b></button>
           </div>
         </article>
+
         <article class="match" data-sport="soccer">
           <div class="match-info">
             <div class="league">
@@ -137,6 +190,7 @@
             <button data-pick="바르셀로나 승" data-odd="3.10"><small>원정 승</small><b>3.10</b></button>
           </div>
         </article>
+
         <article class="match" data-sport="basketball">
           <div class="match-info">
             <div class="league"><span class="flag">🏀</span> NBA <span class="match-tag purple">POPULAR</span></div>
@@ -147,6 +201,7 @@
                 승</small><b>1.92</b></button><button data-pick="골든스테이트 승" data-odd="1.88"><small>원정
                 승</small><b>1.88</b></button></div>
         </article>
+
         <article class="match" data-sport="soccer">
           <div class="match-info">
             <div class="league"><span class="flag">⚽</span> BUNDESLIGA</div>
@@ -157,6 +212,7 @@
               data-pick="무승부" data-odd="3.80"><small>무</small><b>3.80</b></button><button data-pick="도르트문트 승"
               data-odd="4.60"><small>원정 승</small><b>4.60</b></button></div>
         </article>
+
         <article class="match" data-sport="baseball">
           <div class="match-info">
             <div class="league"><span class="flag">⚾</span> BASEBALL · EXHIBITION</div>
@@ -167,6 +223,7 @@
                 승</small><b>1.76</b></button><button data-pick="레드 이글스 승" data-odd="2.05"><small>원정
                 승</small><b>2.05</b></button></div>
         </article>
+
         <article class="match" data-sport="volleyball">
           <div class="match-info">
             <div class="league"><span class="flag">🏐</span> VOLLEYBALL · EXHIBITION</div>
@@ -177,6 +234,7 @@
                 승</small><b>1.72</b></button><button data-pick="부산 웨이브 승" data-odd="2.12"><small>원정
                 승</small><b>2.12</b></button></div>
         </article>
+
       </div>
       <button id="more-matches" class="more-matches">다른 경기 더보기 ↓</button>
     </section>
