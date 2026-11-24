@@ -77,18 +77,7 @@
         <div><span class="section-kicker">EXPLORE MATCHES</span>
           <h2>스포츠 경기 <span>일정</span></h2>
         </div>
-        <div class="date-label" style="font-size: 15px;">
-          <script>
-            const today = new Date();
-            const year = today.getFullYear();
-            const month = String(today.getMonth() + 1).padStart(2, '0');
-            const day = String(today.getDate()).padStart(2, '0');
-            const next = String(today.getDate()+1).padStart(2, '0');
-            const formattedDate = `🗓️ ${year}-${month}-${day} ~ ${year}-${month}-${(next)}`;
-
-            document.querySelector('.date-label').textContent = formattedDate;
-          </script>
-        </div>
+        <div class="date-label" style="font-size: 15px;"></div>
       </div>
       <div class="filters">
         <button class="filter active" data-sport="all">전체 경기 <span id="visible-count">6</span></button>
@@ -110,7 +99,7 @@
             <div class="teams">
               <span>우사기</span><b>VS</b><span>모몽가</span>
             </div>
-            <div class="match-time">◷ 11.07 (토) 21:30 · 경기 예정</div>
+            <div class="match-time"></div>
           </div>
           <div class="odds">
             <button data-pick="우사기 승" data-odd="1.85"><small>홈 승</small><b>1.85</b>
@@ -128,7 +117,7 @@
             <div class="teams">
               <span>하치와레</span><b>VS</b><span>치이카와</span>
             </div>
-            <div class="match-time">◷ 11.08 (일) 20:30 · 경기 예정</div>
+            <div class="match-time"></div>
           </div>
           <div class="odds">
             <button data-pick="하치와레 승" data-odd="1.24"><small>홈 승</small><b>1.24</b>
@@ -146,7 +135,7 @@
             <div class="teams">
               <span>랏코</span><b>VS</b><span>시사</span>
             </div>
-            <div class="match-time">◷ 11.08 (일) 20:30 · 경기 예정</div>
+            <div class="match-time"></div>
           </div>
           <div class="odds">
             <button data-pick="랏코 승" data-odd="1.05"><small>홈 승</small><b>1.05</b>
@@ -164,7 +153,7 @@
             <div class="teams">
               <span>맨체스터 시티</span><b>VS</b><span>아스널</span>
             </div>
-            <div class="match-time">◷ 11.07 (토) 21:30 · 경기 예정</div>
+            <div class="match-time"></div>
           </div>
           <div class="odds">
             <button data-pick="맨체스터 시티 승" data-odd="1.85"><small>홈 승</small><b>1.85</b>
@@ -182,7 +171,7 @@
             <div class="teams">
               <span>레알 마드리드</span><b>VS</b><span>바르셀로나</span>
             </div>
-            <div class="match-time">◷ 11.07 (토) 23:00 · 경기 예정</div>
+            <div class="match-time"></div>
           </div>
           <div class="odds">
             <button data-pick="레알 마드리드 승" data-odd="2.10"><small>홈 승</small><b>2.10</b></button>
@@ -195,7 +184,7 @@
           <div class="match-info">
             <div class="league"><span class="flag">🏀</span> NBA <span class="match-tag purple">POPULAR</span></div>
             <div class="teams"><span>LA 레이커스</span><b>VS</b><span>골든스테이트</span></div>
-            <div class="match-time">◷ 11.08 (일) 10:00 · 경기 예정</div>
+            <div class="match-time"></div>
           </div>
           <div class="odds two"><button data-pick="LA 레이커스 승" data-odd="1.92"><small>홈
                 승</small><b>1.92</b></button><button data-pick="골든스테이트 승" data-odd="1.88"><small>원정
@@ -206,7 +195,7 @@
           <div class="match-info">
             <div class="league"><span class="flag">⚽</span> BUNDESLIGA</div>
             <div class="teams"><span>바이에른 뮌헨</span><b>VS</b><span>도르트문트</span></div>
-            <div class="match-time">◷ 11.08 (일) 02:30 · 경기 예정</div>
+            <div class="match-time"></div>
           </div>
           <div class="odds"><button data-pick="바이에른 뮌헨 승" data-odd="1.65"><small>홈 승</small><b>1.65</b></button><button
               data-pick="무승부" data-odd="3.80"><small>무</small><b>3.80</b></button><button data-pick="도르트문트 승"
@@ -217,7 +206,7 @@
           <div class="match-info">
             <div class="league"><span class="flag">⚾</span> BASEBALL · EXHIBITION</div>
             <div class="teams"><span>블루 타이거즈</span><b>VS</b><span>레드 이글스</span></div>
-            <div class="match-time">◷ 11.08 (일) 14:00 · 가상 경기</div>
+            <div class="match-time"></div>
           </div>
           <div class="odds two"><button data-pick="블루 타이거즈 승" data-odd="1.76"><small>홈
                 승</small><b>1.76</b></button><button data-pick="레드 이글스 승" data-odd="2.05"><small>원정
@@ -228,7 +217,7 @@
           <div class="match-info">
             <div class="league"><span class="flag">🏐</span> VOLLEYBALL · EXHIBITION</div>
             <div class="teams"><span>서울 스파이크</span><b>VS</b><span>부산 웨이브</span></div>
-            <div class="match-time">◷ 11.08 (일) 16:00 · 가상 경기</div>
+            <div class="match-time"></div>
           </div>
           <div class="odds two"><button data-pick="서울 스파이크 승" data-odd="1.72"><small>홈
                 승</small><b>1.72</b></button><button data-pick="부산 웨이브 승" data-odd="2.12"><small>원정
@@ -265,7 +254,7 @@
 
   <script src="js/common.js"></script>
   <script src="js/matches.js"></script>
+  <script src="js/time.js"></script>
   <div class="usagi-float-widget" aria-hidden="true"><img src="assets/usagi_wave.gif" alt=""></div>
 </body>
-
 </html>

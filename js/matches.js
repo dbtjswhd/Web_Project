@@ -165,7 +165,8 @@ $('#submit-pick').addEventListener('click', () => {
   if (amount > u.balance) return alert('포인트가 부족합니다. 가상 충전을 이용하세요.');
   const odds = [...selections.values()].reduce((a, v) => a * v.odd, 1);
   u.balance -= amount;
-  u.history.unshift({ id: Date.now() + '_' + Math.random().toString(36).slice(2, 7), date: new Date().toLocaleString('ko-KR'), stake: amount, odds: Number(odds.toFixed(4)), potential: Math.round(amount * odds), items: [...selections.values()].map(v => ({ ...v })), status: 'pending', returned: 0 });
+  u.history.unshift({ id: Date.now() + '_' + Math.random().toString(36).slice(2, 7), date: new Date().toLocaleString('ko-KR'), 
+    stake: amount, odds: Number(odds.toFixed(4)), potential: Math.round(amount * odds), items: [...selections.values()].map(v => ({ ...v })), status: 'pending', returned: 0 });
   save(); selections.clear(); syncButtons(); renderSlip(); refreshHeader(); alert('가상 구매가 완료되었습니다. 마이페이지에서 내역을 확인하세요.');
 });
 
